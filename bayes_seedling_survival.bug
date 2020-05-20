@@ -1,0 +1,14 @@
+model {
+
+	for (i in 1:N){
+	Y[i] ~ dbetabin(da, (da*(1-mu[i])/mu[i]), n[i])
+	mu[i] <- m/(1 + ab * db[i] + ae * de[i] + aA * dA[i])
+	}
+
+	ab ~ dgamma(a1,a2)
+	ae ~ dgamma(b1,b2)
+	aA ~ dgamma(c1,c2)
+	m ~ dbeta(ma, mb)
+	da ~ dgamma(pa, pb)
+
+}

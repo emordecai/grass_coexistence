@@ -1,0 +1,9 @@
+model {
+  
+ 	for (i in 1:N) {
+	Y[i] ~ dbetabin(da, db, n[i])
+	}
+ 
+	da ~ dgamma(paa+1, pab)
+	db ~ dgamma(pba+1, pbb)
+}

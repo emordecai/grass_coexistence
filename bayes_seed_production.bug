@@ -1,0 +1,14 @@
+model {
+
+	for (i in 1:N){
+	Y[i] ~ dnorm(mu[i],tau)
+	mu[i] <- log(lambda/(1 + ab * db[i] + aA * dA[i]))
+	}
+
+	ab ~ dgamma(a1, a2)
+	aA ~ dgamma(c1, c2)
+	lambda ~ dgamma(la,lb)
+	sigma<-1/tau
+	tau ~ dgamma(t1,t2)
+
+}
