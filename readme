@@ -1,0 +1,5 @@
+This repository contains code that accompanies the paper: Mordecai, E.A., Molinari, N.A., Stahlheber, K.A., Gross, K., D'Antonio, C. 2015. Controls over native perennial grass exclusion and persistence in California grasslands invaded by annuals. Ecology 96(10):2643-2652.
+mordecai_parameter_fitting.R contains R code for estimating demographic model parameters using Bayesian inference.
+mordecai_analysis.R contains R code for simulating the population growth models, estimating growth rates when rare, and performing sensitivity and uncertainty analyses.
+Data and outputs are saved as Rsave files.
+JAGS models are saved as bug files.
